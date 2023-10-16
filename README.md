@@ -1,5 +1,5 @@
 # Kmm Version Catalog
-[![Version](https://img.shields.io/maven-central/v/io.github.raghavendra-dg/version-catalog-kmm?style=flat-square)][mavenCentral]
+![Version](https://img.shields.io/maven-central/v/io.github.raghavendra-dg/version-catalog-kmm?style=flat-square)
 
 ## Usage
 

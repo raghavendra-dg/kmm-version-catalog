@@ -3,6 +3,7 @@ fun properties(key: String) = project.findProperty(key).toString()
 plugins {
     `version-catalog`
     `maven-publish`
+    signing
 }
 
 group = properties("GROUP")
@@ -36,6 +37,14 @@ publishing {
                     }
                 }
 
+                developers {
+                    developer {
+                        id = "raghudg"
+                        name = "Raghavendra"
+                        email = "raaghavendradg@gmail.com"
+                    }
+                }
+
                 scm {
                     url.set(properties("POM_SCM_URL"))
                     connection.set(properties("POM_SCM_CONNECTION"))
@@ -48,5 +57,22 @@ publishing {
                 }
             }
         }
+
+        repositories {
+            maven {
+                maven {
+                    name = "ossrh"
+                    url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+                    credentials {
+                        username = properties("username")
+                        password = properties("password")
+                    }
+                }
+            }
+        }
     }
+}
+
+signing {
+    sign(publishing.publications["maven"])
 }

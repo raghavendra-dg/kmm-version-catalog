@@ -1,3 +1,6 @@
+# Kmm Version Catalog
+[![Version](https://img.shields.io/maven-central/v/io.github.raghavendra-dg/version-catalog-kmm?style=flat-square)][mavenCentral]
+
 ## Usage
 
 You need to add version catalog in `settings.gradle.kts` from remote repository:
